@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ab3b50b-9535-4e9b-8ff3-8601e3d33ef5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/final_prepare_project/testapp/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/final_prepare_project/testapp/templates/testapp/add-catalog.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/final_prepare_project/testapp/templates/testapp/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/final_prepare_project/testapp/templates/testapp/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_prepare_project/testapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/final_prepare_project/testapp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/final_prepare_project/testapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/final_prepare_project/testapp/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/final_prepare_project/testapp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="29" column="36" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="36" />
+            <state relative-caret-position="137">
+              <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -59,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/final_prepare_project/testapp/templates/testapp/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
+            <state relative-caret-position="170">
+              <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -112,10 +107,10 @@
         <option value="$PROJECT_DIR$/final_prepare_project/final_prepare_project/settings.py" />
         <option value="$PROJECT_DIR$/final_prepare_project/testapp/models.py" />
         <option value="$PROJECT_DIR$/final_prepare_project/testapp/forms.py" />
-        <option value="$PROJECT_DIR$/final_prepare_project/testapp/templates/testapp/home.html" />
         <option value="$PROJECT_DIR$/final_prepare_project/testapp/views.py" />
         <option value="$PROJECT_DIR$/final_prepare_project/testapp/templates/testapp/add-catalog.html" />
         <option value="$PROJECT_DIR$/final_prepare_project/testapp/urls.py" />
+        <option value="$PROJECT_DIR$/final_prepare_project/testapp/templates/testapp/home.html" />
       </list>
     </option>
   </component>
@@ -206,12 +201,12 @@
       <updated>1558532201189</updated>
       <workItem from="1558532202567" duration="1295000" />
       <workItem from="1558536212053" duration="4264000" />
-      <workItem from="1558540526402" duration="1185000" />
+      <workItem from="1558540526402" duration="1274000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6744000" />
+    <option name="totallyTimeSpent" value="6833000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -284,13 +279,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/final_prepare_project/testapp/templates/testapp/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="7" lean-forward="true" selection-start-line="7" selection-start-column="7" selection-end-line="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/final_prepare_project/testapp/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -337,11 +325,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/final_prepare_project/testapp/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="29" column="36" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="36" />
+        <state relative-caret-position="137">
+          <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/final_prepare_project/testapp/templates/testapp/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
         </state>
       </provider>
     </entry>
