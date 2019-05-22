@@ -1,8 +1,9 @@
 from django.contrib.auth import logout, login, authenticate
+from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
-from .forms import CatalogForm, ShopForm
+from .forms import CatalogForm, ShopForm, SignupForm
 from .models import Catalog
 
 
@@ -88,4 +89,18 @@ def auth_logout(request):
 	return redirect('auth_login')
 
 def auth_register(request):
-    return redirect('auth_login')
+    context = {}
+    if request.method == 'POST':
+        form = SignupForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            raw_pass = form.cleaned_data.get('password1')
+            user = authenticate(request, username=username, password=raw_pass)
+            login(request, user, backend='django.contrib.auth.backends.ModelBackend')
+            return redirect('catalog')
+    else:
+        form = SignupForm()
+
+    context['form'] = form
+    return render(request, template_name='testapp/register.html', context=context)
