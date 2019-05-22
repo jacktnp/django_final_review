@@ -10,6 +10,14 @@
 <h1>จำนวน Catalog : {{ catalog_num }}</h1>
 <a href="{% url 'addcat' %}">Add Catalog</a>
 <a href="{% url 'addshop' %}">Add Item</a>
+{% if user.is_authenticated == 0 %}
+<a href="{% url 'auth_login' %}">เข้าสู่ระบบ</a>
+{% endif %}
+{% if user.is_authenticated %}
+<a href="{% url 'auth_logout' %}">ลงขื่อออก</a>
+{% endif %}
+<a href="{% url 'auth_register' %}">สมัครสมาชิก</a>
+
 
 <br>
 
