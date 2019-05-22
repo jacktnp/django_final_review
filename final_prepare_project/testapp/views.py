@@ -1,17 +1,24 @@
 from django.contrib.auth import logout, login, authenticate
+from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.contrib.auth.models import Group, User
 
 from .forms import CatalogForm, ShopForm, SignupForm
 from .models import Catalog
 
+
+def is_manager(user):
+    return user.groups.filter(name='manager').exists()
 
 def home(request):
     context = {}
 
     return render(request, template_name='testapp/home.html', context=context)
 
+@login_required
+@permission_required('catalog.change_catalog')
 def catalog(request):
     catalog = Catalog.objects.all()
 
@@ -71,6 +78,8 @@ def auth_login(request):
             else:
                 if request.user.is_staff:
                     return redirect('/admin')
+                elif is_manager(user):
+                    return redirect('addcat')
                 else:
                     return redirect('catalog')
         else:
@@ -88,12 +97,15 @@ def auth_logout(request):
 	logout(request)
 	return redirect('auth_login')
 
+#สมัครสมาชิก
 def auth_register(request):
     context = {}
     if request.method == 'POST':
         form = SignupForm(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save()
+            group = Group.objects.get(name='manager')
+            user.groups.add(group)
             username = form.cleaned_data.get('username')
             raw_pass = form.cleaned_data.get('password1')
             user = authenticate(request, username=username, password=raw_pass)

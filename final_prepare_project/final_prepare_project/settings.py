@@ -128,3 +128,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'), #กรณีต้องการให้เชื่อมไปยังโฟลเดอร์ assets ใหญ่
     os.path.join(BASE_DIR, 'app_name/static') #กรณีต้องการให้เชื่อมไปยังโฟลเดอร์ assets ของ AppName
 ]
+
+LOGIN_URL = 'login/'
