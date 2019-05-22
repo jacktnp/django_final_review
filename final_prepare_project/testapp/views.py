@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
-from .forms import CatalogForm
+from .forms import CatalogForm, ShopForm
 from .models import Catalog
 
 
@@ -33,3 +33,18 @@ def addcat(request):
 
     context['form'] = form
     return render(request, 'testapp/add-catalog.html', context=context)
+
+
+def addshop(request):
+    context = {}
+    if request.method == 'POST':
+        form = ShopForm(request.POST)
+        if form.is_valid():
+            add_shop = form.save(commit=False)
+            add_shop.save()
+            return redirect('catalog')
+    else:
+        form = ShopForm()
+
+    context['form'] = form
+    return render(request, 'testapp/add-shop.html', context=context)

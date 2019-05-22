@@ -9,7 +9,15 @@
 <body>
 <h1>จำนวน Catalog : {{ catalog_num }}</h1>
 <a href="{% url 'addcat' %}">Add Catalog</a>
+<a href="{% url 'addshop' %}">Add Item</a>
+
 <br>
+
+<ul>
+{% for cat in catalog %}
+    <li>{{ cat.name }}</li>
+{% endfor %}
+</ul>
 
 <img src="{% static 'champ.jpg' %}" alt="">
 

@@ -6,9 +6,9 @@
 </head>
 <body>
 
-<form method="post" action="{% url 'addcat' %}">
+<form method="post" action="{% url 'addshop' %}">
     {% csrf_token %}
-    <h2 class="text-center">Shopping Catalog</h2>
+    <h2 class="text-center">Shopping Item</h2>
 
     {% if error %}
     <span style="color: red;">{{ error }}</span>
